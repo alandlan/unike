@@ -17,7 +17,7 @@ function useIdsActive(data = []) {
 
   useEffect(() => {
     setIds(getIds());
-  }, [data]);
+  }, [data, getIds]);
 
   return ids;
 }
@@ -35,19 +35,21 @@ export function useServices(initial = []) {
           return service;
         });
         return d;
-      })
+      }),
     );
-  }, [data]);
+  }, [data, ids]);
 
   const active = (itm, val) => {
     setValue(
       value.map(d => {
         d.Servicos = d.Servicos.map(service => {
-          if (itm.Id === service.Id) service.active = val;
+          if (itm.Id === service.Id) {
+            service.active = val;
+          }
           return service;
         });
         return d;
-      })
+      }),
     );
   };
 

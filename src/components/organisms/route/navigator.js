@@ -1,61 +1,61 @@
-import { createSwitchNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
+import { createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import {
   HomePage,
   LoginPage,
-  LogoutPage,
   LoadingPage,
   SignupContactData,
   SignupCategories,
   SignupProfessional,
   SignupLocalization,
   SignupSurvey,
-  InitialPage
+  InitialPage,
 } from '../../pages';
 
 const AppStackNavigator = createStackNavigator({
-  Home: HomePage
+  Home: HomePage,
 });
 
 const AuthStackNavigator = createStackNavigator({
   Login: {
     screen: LoginPage,
     navigationOptions: {
-      header: null
-    }
-  }
+      header: null,
+    },
+  },
 });
 
 const SignUpStackNavigator = createStackNavigator({
   SignupContactData: {
     screen: SignupContactData,
     navigationOptions: {
-      header: null
-    }
+      header: null,
+    },
   },
   SignupProfessional: {
     screen: SignupProfessional,
     navigationOptions: {
-      header: null
-    }
+      header: null,
+    },
   },
   SignupCategories: {
     screen: SignupCategories,
     navigationOptions: {
-      header: null
-    }
+      header: null,
+    },
   },
   SignupLocalization: {
     screen: SignupLocalization,
     navigationOptions: {
-      header: null
-    }
+      header: null,
+    },
   },
   SignupSurvey: {
     screen: SignupSurvey,
     navigationOptions: {
-      header: null
-    }
-  }
+      header: null,
+    },
+  },
 });
 
 const SwitchNavigator = createSwitchNavigator(
@@ -64,10 +64,10 @@ const SwitchNavigator = createSwitchNavigator(
     AuthLoading: LoadingPage,
     App: AppStackNavigator,
     Auth: AuthStackNavigator,
-    SignUp: SignUpStackNavigator
+    SignUp: SignUpStackNavigator,
   },
   {
-    initialRouteName: 'Initial'
-  }
+    initialRouteName: 'Initial',
+  },
 );
 export { SwitchNavigator };

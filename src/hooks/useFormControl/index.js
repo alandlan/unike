@@ -17,13 +17,13 @@ const useFormControl = () => {
     const item = await getItem();
     setState({
       ...state,
-      ...JSON.parse(item)
+      ...JSON.parse(item),
     });
   };
 
   useEffect(() => {
     setStorageToState();
-  }, []);
+  }, [setStorageToState]);
 
   const set = (type: string, value: string | Array<any>) => {
     const valid = validate(type, value);
@@ -31,8 +31,8 @@ const useFormControl = () => {
       ...state,
       [type]: {
         value,
-        valid
-      }
+        valid,
+      },
     });
   };
   const record = async () => {

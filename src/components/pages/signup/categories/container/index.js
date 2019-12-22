@@ -1,4 +1,3 @@
-import SignupPageThreePresentation from '../presentation';
 import React from 'react';
 import SignupCategoriesPresentation from '../presentation';
 import { useControl } from '../../../../../hooks';
