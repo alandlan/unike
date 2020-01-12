@@ -18,7 +18,7 @@ const InitialPresentation = props => {
         <Row style={style.message} size={1}>
           <H1 style={style.messageTitle}>Bem vindo ao app do Profissional</H1>
           <Text style={style.messageText}>
-            Receba e selecione os serviços que deseja, criando assim sua própria agenda!
+            Receba e selecione os serviços que deseja, criando assim sua agenda!
           </Text>
         </Row>
         <Row style={style.action}>
